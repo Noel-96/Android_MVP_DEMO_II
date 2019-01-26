@@ -25,7 +25,7 @@ public interface TopMovies_MVP {
 
 
     interface  Model {
-        //Observable<ViewModel> result();
+        Observable<ViewModel> result();
 
     }
 }
