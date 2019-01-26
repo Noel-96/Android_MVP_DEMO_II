@@ -1,8 +1,7 @@
-package com.noel_inc.android_mvp_demo_ii.network.retrofitclient.api_for_country;
+package com.noel_inc.android_mvp_demo_ii.network.retrofitclient.api_for_more_info;
 
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import com.noel_inc.android_mvp_demo_ii.network.retrofitclient.api_for_movie_name.MovieApiService;
 
 import dagger.Module;
 import dagger.Provides;
@@ -12,7 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
-public class ApiModuleForCountry {
+public class ApiModuleForMoreInfo {
 
 
     public final String BASE_URL = "http://www.omdbapi.com";
@@ -40,7 +39,7 @@ public class ApiModuleForCountry {
 
 
     @Provides
-    public MovieCountryApiService movieCountryApiService(){
-        return provideRetrofit(BASE_URL,provideClient()).create(MovieCountryApiService.class);
+    public MovieMoreInfoApiService movieMoreInfoApiService(){
+        return provideRetrofit(BASE_URL,provideClient()).create(MovieMoreInfoApiService.class);
     }
 }
